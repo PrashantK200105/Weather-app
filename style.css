@@ -11,19 +11,22 @@ body{
     display: flex;
     align-items: center;
     justify-content: centre;
-    background: #06283D;
+    background: #16063d;
 
 }
 
 .container{
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 400px;
-    height: 605px;
+    height: 105px;
     background: #fff;
     padding: 28px 32px;
     overflow: hidden;
     border-radius: 18px;
     font-family: 'Roboto', sans-serif;
+    transform: translate(-50%, -50%);
     transition: 0.6s ease-out;
 }
 
@@ -36,7 +39,7 @@ body{
 }
 
 .search-box input{
-    color: #06283D;
+    color: #16063d;
     width: 80%;
     font-size: 24px;
     font-weight: 500;
@@ -47,7 +50,7 @@ body{
 .search-box input::placeholder{
     font-size: 20px;
     font-weight: 500;
-    color: #06283D;
+    color: #16063d;
     text-transform: capitalize;
 }
 
@@ -55,11 +58,11 @@ body{
     cursor: pointer;
     width: 50px;
     height: 50px;
-    color: #06283d;
+    color: #16063d;
     background: #dff6ff;
     border-radius: 50%;
     font-size: 22px;
-    transition: 0.s ease;
+    transition: 0.4s ease;
 }
 
 .search-box button:hover{
@@ -70,7 +73,7 @@ body{
 
 .search-box i{
     position: absolute;
-    color: #06283D;
+    color: #16063d;
     font-size: 28px;
 
 }
@@ -86,7 +89,7 @@ body{
 
 .weather-box .temprature{
     position: relative;
-    color: #06283D;
+    color: #16063d;
     font-size: 4rem;
     font-weight: 800;
     margin-top: 30px;
@@ -100,7 +103,7 @@ body{
 }
 
 .weather-box .description{
-    color: #06283D;
+    color: #16063d;
     font-size: 22px;
     font-weight: 500;
     text-transform: capitalize;
@@ -132,15 +135,21 @@ body{
 }
 
 .weather-details i{
-    color: #06283D;
+    color: #16063d;
     font-size: 26px;
     margin-right: 10px;
     margin-top: 6px;
 }
 
 .weather-details span{
-    color: #06283D;
+    color: #16063d;
     font-size: 22px;
+    font-weight: 500;
+}
+
+.weather-details p{
+    color: #16063d;
+    font-size: 14px;
     font-weight: 500;
 }
 
@@ -155,4 +164,30 @@ body{
 
 .not-found img{
     width:70%;
+
+}
+
+.not-found p{
+    color: #16063d;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+.weather-box .weather-details{
+   scale: 0;
+   opacity: 0; 
+}
+
+.fadeIn{
+    animation: 0.5s fadeIn forwards;
+    animation-delay: 0.5s;
+
+}
+
+@keyframes fadeIn{
+    to {
+        scale: 1;
+        opacity: 1;
+    }
 }
